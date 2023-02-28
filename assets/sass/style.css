@@ -151,6 +151,15 @@ button:focus {
   outline: none;
 }
 
+.modal-btn-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-size: cover;
+}
+
 /*==========================================================================
 Hedging CSS
 ==========================================================================*/
@@ -313,7 +322,7 @@ Theme Btn CSS
 }
 .theme-btn:hover::before,
 .theme-border-btn:hover::before {
-  width: 50%;
+  width: 51%;
   opacity: 1;
 }
 .theme-btn:hover::after,
@@ -331,6 +340,9 @@ Theme Btn CSS
   background: transparent;
   border: 1px solid var(--primary-color);
   padding: 15px 42px;
+}
+.theme-border-btn.small {
+  padding: 10px 26px;
 }
 .theme-border-btn::before {
   background: var(--primary-color);
@@ -2612,9 +2624,11 @@ Menu Bar
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 99999;
-  border-bottom: 1px solid var(--border-color-1);
+  z-index: 99;
   padding: 0 50px;
+}
+.header__area.small-page {
+  background: var(--heading-color);
 }
 .header__area-menubar {
   display: flex;
@@ -2641,6 +2655,9 @@ Menu Bar
   display: inline-block;
   position: relative;
   list-style: none;
+}
+.header__area-menubar-right-menu ul li.active > a {
+  color: var(--primary-color);
 }
 .header__area-menubar-right-menu ul li:hover > a {
   color: var(--primary-color);
@@ -2715,16 +2732,19 @@ Menu Bar
 .header__area-menubar-right-menu ul li a {
   color: var(--white);
   display: block;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 28px;
   font-weight: 600;
   transition: all 0.4s ease-out 0s;
   text-transform: capitalize;
-  padding: 46px 35px;
+  padding: 30px 22px;
   font-family: var(--heading-font);
 }
 .header__area-menubar-right-menu ul li:last-child a {
   padding-right: 0;
+}
+.header__area-menubar-right-menu ul li:first-child a {
+  padding-left: 0;
 }
 .header__area-menubar-right-menu ul li.menu-item-has-children > a {
   position: relative;
@@ -3113,9 +3133,6 @@ Menu Box CSS
   position: relative;
   top: 5px;
 }
-.header__area-menubar-right-sidebar-popup-menu ul li.active > a {
-  color: var(--primary-color);
-}
 .header__area-menubar-right-sidebar-popup-menu ul li:hover > a {
   color: var(--primary-color);
 }
@@ -3265,7 +3282,7 @@ Responsive Menu Css
     padding-left: 30px;
   }
 }
-@media (max-width: 1100px) {
+@media (max-width: 1290px) {
   .header__area-menubar-right-box {
     display: none;
   }
@@ -6953,6 +6970,11 @@ Contact
   height: 570px;
   display: block;
   filter: grayscale(1);
+}
+
+.form__wrapper {
+  min-height: 100vh;
+  padding-top: 150px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -40,9 +40,13 @@ Menu Bar
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 99999;
-  border-bottom: 1px solid var(--border-color-1);
+  z-index: 99;
+  // border-bottom: 1px solid var(--border-color-1);
   padding: 0 50px;
+
+  &.small-page {
+    background: var(--heading-color);
+  }
 
   &-menubar {
     display: flex;
@@ -78,6 +82,11 @@ Menu Bar
             display: inline-block;
             position: relative;
             list-style: none;
+
+
+            &.active>a {
+              color: var(--primary-color);
+            }
 
             &:hover>a {
               color: var(--primary-color);
@@ -171,17 +180,21 @@ Menu Bar
             a {
               color: var(--white);
               display: block;
-              font-size: 18px;
+              font-size: 16px;
               line-height: 28px;
               font-weight: 600;
               transition: all 0.4s ease-out 0s;
               text-transform: capitalize;
-              padding: 46px 35px;
+              padding: 30px 22px;
               font-family: var(--heading-font);
             }
 
             &:last-child a {
               padding-right: 0;
+            }
+
+            &:first-child a {
+              padding-left: 0;
             }
 
             &.menu-item-has-children> {
@@ -695,10 +708,6 @@ Menu Box CSS
           top: 5px;
         }
 
-        &.active>a {
-          color: var(--primary-color);
-        }
-
         &:hover>a {
           color: var(--primary-color);
         }
@@ -886,7 +895,7 @@ Responsive Menu Css
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1290px) {
   .header__area {
     &-menubar {
       &-right {

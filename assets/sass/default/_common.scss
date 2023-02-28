@@ -156,6 +156,15 @@ button:focus {
   outline: none;
 }
 
+.modal-btn-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-size: cover;
+}
+
 /*==========================================================================
 Hedging CSS
 ==========================================================================*/
@@ -285,7 +294,7 @@ Theme Btn CSS
     color: var(--white);
 
     &::before {
-      width: 50%;
+      width: 51%;
       opacity: 1;
     }
 
@@ -305,6 +314,10 @@ Theme Btn CSS
   background: transparent;
   border: 1px solid var(--primary-color);
   padding: 15px 42px;
+
+  &.small {
+    padding: 10px 26px;
+  }
 
   &::before {
     background: var(--primary-color);

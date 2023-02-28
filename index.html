@@ -27,8 +27,8 @@
     </div>
   </div>
 
-  <header class="header__sticky">
-    <div class="header__area two">
+  <header class="header__sticky ">
+    <div class="header__area">
       <div class="container custom__container">
         <div class="header__area-menubar">
           <div class="header__area-menubar-left">
@@ -38,46 +38,21 @@
             </div>
           </div>
           <div class="header__area-menubar-right">
-            <div class="header__area-menubar-right-info">
-              <span><a href="#"><i class="fal fa-map-marker-alt"></i>Россия, Вологда, ул. Первомайская, д. 42</a></span>
+            <div class="header__area-menubar-right-menu menu-responsive">
+              <ul id="mobilemenu">
+                <li class="active"><a href="index.html">Главная</a> </li>
+                <li><a href="about.html">О гостинице</a></li>
+                <li><a href="services-team.html">Команда</a></li>
+                <li><a href="room-style.html">Номера</a></li>
+                <li><a href="contact.html">Контакты</a> </li>
+                <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Профиль</a> </li>
+              </ul>
             </div>
-            <div class="header__area-menubar-right-sidebar">
-              <div class="header__area-menubar-right-sidebar-popup-icon"><i class="fal fa-bars"></i></div>
+          </div>
+          <div class="header__area-menubar-right-box">
+            <div class="header__area-menubar-right-box-btn">
+              <a class="theme-btn" href="contact.html">Забронировать<i class="fal fa-long-arrow-right"></i></a>
             </div>
-            <!-- sidebar Menu Start -->
-            <div class="header__area-menubar-right-sidebar-popup two">
-              <div class="sidebar-close-btn"><i class="fal fa-times"></i></div>
-              <div class="header__area-menubar-right-sidebar-popup-logo">
-                <a href="index.html"> <img src="assets/img/logo-1.png" alt=""> </a>
-              </div>
-              <div class="header__area-menubar-right-sidebar-popup-menu">
-                <ul>
-                  <li><a href="index.html">Главная</a> </li>
-                  <li><a href="about.html">О гостинице</a></li>
-                  <li><a href="services-team.html">Команда</a></li>
-                  <li><a href="room-style.html">Номера</a></li>
-                  <li><a href="blog-grid.html">Новости</a></li>
-                  <li><a href="contact.html">Контакты</a> </li>
-                  <li><a href="profile.html">Профиль</a> </li>
-                </ul>
-              </div>
-              <div class="header__area-menubar-right-sidebar-popup-bottom">
-                <p>© 2023 Гостиница <a href="index.html">Жемчуг</a>. Официальный сайт.</p>
-                <div class="header__area-menubar-right-sidebar-popup-social">
-                  <ul>
-                    <li><a href="#"><i class="fab fa-vk"></i></a>
-                    </li>
-                    <li><a href="#"><i class="fas fa-paper-plane"></i></a>
-                    </li>
-                    <li><a href="#"><i class="fab fa-youtube"></i></a>
-                    </li>
-                    <li><a href="#"><i class="fas fa-phone"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="sidebar-overlay"></div>
           </div>
         </div>
       </div>
@@ -811,6 +786,89 @@
       </div>
     </div>
   </footer>
+
+  <!-- Modal Start -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="container p-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <h2 class="text-center mb-5">Регистрация</h2>
+            <button type="button" class="btn-close modal-btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+            <form action="profile.html">
+              <div class="mb-4 form-floating">
+                <input type="text" id="nameInput" class="form-control" placeholder="Ваше имя и фамилия" />
+                <label for="nameInput" class="form-label">Ваше имя и фамилия</label>
+              </div>
+
+              <div class="mb-4 form-floating">
+                <input type="email" id="emailInput" class="form-control" placeholder="Ваш Email-адрес" />
+                <label for="emailInput" class="form-label">Ваш Email-адрес</label>
+              </div>
+
+              <div class="mb-4 form-floating">
+                <input type="password" id="passwordInput" class="form-control" placeholder="Пароль" />
+                <label for="passwordInput" class="form-label">Пароль</label>
+              </div>
+
+              <div class="mb-4 form-floating">
+                <input type="password" id="RepeatPasswordInput" class="form-control" placeholder="Повторите пароль" />
+                <label for="RepeatPasswordInput" class="form-label">Повторите пароль</label>
+              </div>
+
+              <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" value="" id="form2Example3cg" />
+                <label class="form-check-label" for="form2Example3g">
+                  Я принимаю все правила <a href="#" style="color: var(--primary-color);">Политики персональных данных</a>
+                </label>
+              </div>
+
+              <button type="submit" href="profile.html" class="d-block w-100 text-center mb-4 theme-btn">Зарегистрироваться<i class="fal fa-long-arrow-right"></i></button>
+              <div class="text-center">
+                <p class="text-muted mb-2">Уже есть аккаунт?</p>
+                <a class="theme-border-btn" href="#" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Войти<i class="fal fa-long-arrow-right"></i></a>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal End -->
+
+  <div class="modal fade" id="exampleModalToggle2" tabindex="-1" aria-labelledby="exampleModalToggle2" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="container p-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <h2 class="text-center mb-5">Вход в аккаунт</h2>
+            <button type="button" class="btn-close modal-btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+            <form action="profile.html">
+              <div class="mb-4 form-floating">
+                <input type="email" id="emailInput" class="form-control" placeholder="Ваш Email-адрес" />
+                <label for="emailInput" class="form-label">Ваш Email-адрес</label>
+              </div>
+
+              <div class="mb-4 form-floating">
+                <input type="password" id="passwordInput" class="form-control" placeholder="Пароль" />
+                <label for="passwordInput" class="form-label">Пароль</label>
+              </div>
+              <button type="submit" href="profile.html" class="d-block w-100 text-center mb-4 theme-btn">Войти<i class="fal fa-long-arrow-right"></i></button>
+              <div class="text-center">
+                <p class="text-muted mb-2">Нет аккаунта?</p>
+                <a class="theme-border-btn" href="#" data-bs-target="#exampleModal" data-bs-toggle="modal">Регистрация<i class="fal fa-long-arrow-right"></i></a>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Footer Area End -->
   <!-- Scroll Btn Start -->
   <div class="scroll-up">
